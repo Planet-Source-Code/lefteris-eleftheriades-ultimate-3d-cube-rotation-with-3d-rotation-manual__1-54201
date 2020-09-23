@@ -1,0 +1,190 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Rotation Matrices</title>
+</head>
+
+<body>
+
+<p><font size="6">The Points:</font></p>
+<p>Each point has 3 co-ordinates X, Y and Z. These represent Left, Top and Depth 
+respectively. The data is pure 3D algebra and we don't mind how the Z point is 
+going to be displayed in our form's 2D plain. The presentation of the Z point 
+occurs after the transposition.</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="45%" id="AutoNumber4" height="74">
+  <tr>
+    <td width="21%" rowspan="2" height="74">
+    <img border="0" src="Cube.bmp" width="181" height="142"></td>
+    <td width="27%" height="4" align="center">X</td>
+    <td width="26%" height="4" align="center">Y</td>
+    <td width="26%" height="4" align="center">Z</td>
+  </tr>
+  <tr>
+    <td width="27%" height="69" align="center">
+    <p style="margin-top: 0; margin-bottom: 0"><font color="#FF0000">-1</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font color="#FF9933">-1</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font color="#CCCC00">-1</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font color="#00FF00">-1</font><p style="margin-top: 0; margin-bottom: 0">
+    <font color="#33CCFF">1</font><p style="margin-top: 0; margin-bottom: 0">
+    <font color="#0000FF">1</font><p style="margin-top: 0; margin-bottom: 0">
+    <font color="#FF33CC">1</font><p style="margin-top: 0; margin-bottom: 0">
+    <font color="#9900CC">1</font></td>
+    <td width="26%" height="69" align="center">
+    <p style="margin-top: 0; margin-bottom: 0"><font color="#FF0000">1</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font color="#FF9933">1</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font color="#CCCC00">-1</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font color="#00FF00">-1</font><p style="margin-top: 0; margin-bottom: 0">
+    <font color="#33CCFF">1</font><p style="margin-top: 0; margin-bottom: 0">
+    <font color="#0000FF">1</font><p style="margin-top: 0; margin-bottom: 0">
+    <font color="#FF33CC">-1</font><p style="margin-top: 0; margin-bottom: 0">
+    <font color="#9900CC">-1</font></td>
+    <td width="26%" height="69" align="center">
+    <p style="margin-top: 0; margin-bottom: 0"><font color="#FF0000">1</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font color="#FF9933">-1</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font color="#CCCC00">-1</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font color="#00FF00">1</font><p style="margin-top: 0; margin-bottom: 0">
+    <font color="#33CCFF">1</font><p style="margin-top: 0; margin-bottom: 0">
+    <font color="#0000FF">-1</font><p style="margin-top: 0; margin-bottom: 0">
+    <font color="#FF33CC">1</font><p style="margin-top: 0; margin-bottom: 0">
+    <font color="#9900CC">-1</font></td>
+  </tr>
+</table>
+<p><font size="6">Rotation Matrices:</font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="77%" id="AutoNumber1" height="38">
+  <tr>
+    <td width="50%" rowspan="3" height="38">
+    <img border="0" src="rot.bmp" width="364" height="233"></td>
+    <td width="50%" height="38">
+    <p style="margin-top: 0; margin-bottom: 0">For Rotation about X axis</td>
+  </tr>
+  <tr>
+    <td width="50%" height="39">For Rotation about Y axis</td>
+  </tr>
+  <tr>
+    <td width="50%" height="38">For Rotation about Z axis</td>
+  </tr>
+</table>
+<p>The transformations conclude as follows:</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2">
+  <tr>
+    <td width="33%">
+    <p style="margin-top: 0; margin-bottom: 0">For Rotation about X axis:</td>
+    <td width="33%">For Rotation about Y axis</td>
+    <td width="34%">For Rotation about Z axis</td>
+  </tr>
+  <tr>
+    <td width="33%">
+    <p style="margin-top: 0; margin-bottom: 0">
+    <font face="Courier New" size="2">Xt = X</font></p>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <font face="Courier New" size="2">Yt = Y cos<span lang="el">&#952;</span> - Z sin<span lang="el">&#952;</span></font></p>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <font face="Courier New" size="2">Zt = Y sin<span lang="el">&#952;</span> - Z cos<span lang="el">&#952;</span></font></td>
+    <td width="33%">
+    <p style="margin-top: 0; margin-bottom: 0">
+    <font face="Courier New" size="2">Xt = X cos<span lang="el">&#952;</span> + Z sin<span lang="el">&#952;</span>
+    </font></p>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <font face="Courier New" size="2">Yt = Y </font></p>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <font face="Courier New" size="2">Zt = -X sin<span lang="el">&#952;</span> + Z 
+    cos<span lang="el">&#952;</span></font></td>
+    <td width="34%">
+    <p style="margin-top: 0; margin-bottom: 0">
+    <font face="Courier New" size="2">Xt = X cos<span lang="el">&#952;</span> - Y sin<span lang="el">&#952;</span>
+    </font></p>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <font face="Courier New" size="2">Yt = X sin<span lang="el">&#952;</span> + Y sin<span lang="el">&#952;</span></font></p>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <font face="Courier New" size="2">Zt = Z</font></td>
+  </tr>
+</table>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Times New Roman">Where 
+Xt, Yt, Zt are the the transposed points X, Y, Z at angle <span lang="el">&#952;</span> 
+(in rads)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Times New Roman">rads = 
+Pi * Degrees / 180</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Times New Roman">where Pi 
+= 3.1415926535897932384626433832795</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Times New Roman">
+Following are 3 functions that transpose the points of a given array</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Times New Roman">
+according to the rotation angle T (in rads)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="78%" id="AutoNumber3">
+  <tr>
+    <td width="100%"><font face="Courier New" size="2"><font color="#0000FF">Sub</font> 
+    ZRotate(<font color="#0000FF">ByRef</font> X() <font color="#0000FF">As Long</font>,
+    <font color="#0000FF">ByRef</font> Y() <font color="#0000FF">As Long</font>,
+    <font color="#0000FF">ByVal</font> T#)<br>
+&nbsp;&nbsp;&nbsp; <font color="#0000FF">Dim</font> X1&amp;, i&amp;<br>
+&nbsp;&nbsp;&nbsp; <font color="#0000FF">For</font> i = <font color="#0000FF">
+    LBound</font>(X) To <font color="#0000FF">UBound</font>(X)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; X1 = X(i)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; X(i) = X1 * Cos(T) - Y(i) * Sin(T)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Y(i) = X1 * Sin(T) + Y(i) * Cos(T)<br>
+&nbsp;&nbsp;&nbsp; <font color="#0000FF">Next</font> i<br>
+    <font color="#0000FF">End Sub</font><br>
+&nbsp;</font><hr>
+    <p><font face="Courier New" size="2"><font color="#0000FF">Sub</font> 
+    YRotate(<font color="#0000FF">ByRef</font> X() <font color="#0000FF">As Long</font>,
+    <font color="#0000FF">ByRef</font> Z() <font color="#0000FF">As Long</font>,
+    <font color="#0000FF">ByVal</font> T#)<br>
+&nbsp;&nbsp;&nbsp; <font color="#0000FF">Dim</font> X1&amp;, i&amp;<br>
+&nbsp;&nbsp;&nbsp; <font color="#0000FF">For</font> i = <font color="#0000FF">
+    LBound</font>(X) To <font color="#0000FF">UBound</font>(X)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; X1 = X(i)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; X(i) = X1 * Cos(T) + Z(i) * Sin(T)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Z(i) = -X1 * Sin(T) + Z(i) * Cos(T)<br>
+&nbsp;&nbsp;&nbsp; <font color="#0000FF">Next</font> i<br>
+    <font color="#0000FF">End Sub</font></font></p>
+    <hr>
+    <p><font face="Courier New" size="2"><font color="#0000FF">Sub</font> 
+    XRotate(<font color="#0000FF">ByRef</font> Y() <font color="#0000FF">As Long</font>,
+    <font color="#0000FF">ByRef</font> Z() <font color="#0000FF">As Long</font>,
+    <font color="#0000FF">ByVal</font> T#)<br>
+&nbsp;&nbsp;&nbsp; <font color="#0000FF">Dim</font> Y1&amp;, i&amp;<br>
+&nbsp;&nbsp;&nbsp; <font color="#0000FF">For</font> i = <font color="#0000FF">
+    LBound</font>(Y) To <font color="#0000FF">UBound</font>(Y)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Y1 = Y(i)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Y(i) = Y1 * Cos(T) - Z(i) * Sin(T)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Z(i) = Y1 * Sin(T) + Z(i) * Cos(T)<br>
+&nbsp;&nbsp;&nbsp; <font color="#0000FF">Next</font> i<br>
+    <font color="#0000FF">End Sub</font></font></td>
+  </tr>
+</table>
+<p><font face="Times New Roman">Using the 3 functions above you can transpose 
+many points with 1 single call</font></p>
+<p><font face="Times New Roman" size="6">2D Geometry in the X, Y Plain</font></p>
+<p>Visual basic has as the origin of the axes the Top Left - most point of the 
+form. we need to change the center to the center of the form (for compatibility 
+with the standard mathematical form)</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">X = 
+CenterX + X</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Y = 
+CenterY - Y</font></p>
+<p><font face="Times New Roman" size="6">3D Geometry in the X, Y Plain</font></p>
+<p>The technique is quite simple: Add a portion of the Z point to the X point 
+and a portion of the Z point to the Y point.<font face="Times New Roman"> The 
+proportion is based on the viewing angle. Usually the angle is 45 degrees</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Xdest = CenterX + Xt - Zt Cos(Prespective angle)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Ydest = CenterY - Yt + Zt Sin(Prespective angle)</font></p>
+<p>To draw the point X,Y,Z under a prespective of 45 degrees (Pi / 4 rads)</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Cx 
+= Me.ScaleWidth / 2</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Cy 
+= Me.ScaleHeight/2</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+PSet (Cx + Xt - Zt * Cos(Pi / 4), Cy - Yt + Zt * Sin(Pi / 4))</font></p>
+
+</body>
+
+</html>
